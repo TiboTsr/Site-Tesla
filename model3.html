@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <link rel="website icon" href="img/logo.png">
+    <link rel="icon" href="./img/logo (2).png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PROJET NSI</title>
@@ -14,22 +14,27 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header id="nav">
+        <nav >
             <div class="logo"><a href="index.html">
                     <img src="./img/logo (2).png" alt="Logo"></a>
             </div>
-            <div class="liens">
-                <ul>
+            <div  class="liens">
+                <ul id="texte">
                     <li><a href="modelS.html">Model S</a></li>
                     <li><a href="model3.html">Model 3</a></li>
                     <li><a href="modelX.html">Model X</a></li>
                     <li><a href="modelY.html">Model Y</a></li>
+                    <div id="toggle">
+                        <i class="indicator"></i>
+                    </div>
+
+
                 </ul>
             </div>
         </nav>
     </header>
-    <nav class="navbar">
+    <nav id="leftbar" class="navbar">
         <ul class="navbar-menu">
             <li class="navbar-item logo">
                 <a href="index.html" class="navbar-link">
@@ -40,18 +45,18 @@
             <li class="navbar-item">
                 <a href="index.html" class="navbar-link">
                     <i class="fas fa-home navbar-icon"></i>
-                    <span class="navbar-title">Acceuil</span>
+                    <span class="navbar-title">Accueil</span>
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="formulaire.html" class="navbar-link">
-                    <i class="fas fa-folder navbar-icon"></i>
+                    <i class="fas fa-bell navbar-icon"></i>
                     <span class="navbar-title">Newsletter</span>
                 </a>
             </li>
             <li class="navbar-item">
                 <a href="voitures.html" class="navbar-link">
-                    <i class="fas fa-bell navbar-icon"></i>
+                    <i class="fas fa-folder navbar-iconfas fa-bell navbar-icon"></i>
                     <span class="navbar-title">Modèles de voitures</span>
                 </a>
             </li>
@@ -62,18 +67,19 @@
                 </a>
             </li>
             <li class="navbar-item">
-                <a href="#" class="navbar-link">
-                    <i class="fas fa-phone navbar-icon"></i>
-                    <span class="navbar-title">Contact</span>
+                <a href="https://www.google.fr" class="navbar-link">
+                    <i class="fas fa-sign-out-alt navbar-icon"></i>
+                    <span class="navbar-title">Exit</span>
                 </a>
             </li>
         </ul>
     </nav>
-    <main>
+    <main id="page">
+        <script src="script.js"></script>
         <center>
         <h1>Tesla Model 3</h1>
         <p>-------------------</p>
-        <img width="500px" src="./img/teslamodel3.jpg" id="teslamodels">
+        <img width="500px" src="./img/teslamodel3.jpg" id="teslamodel3">
         <p>
             <button type="button" onclick="agrandir()">+ </button>
             <button type="button" onclick="diminuer()">- </button>
@@ -85,28 +91,28 @@
         <p>-------------------</p>
         <p>La Tesla Model 3 est équipée de nombreuses fonctionnalités avancées, notamment une interface de conduite centrée sur l'écran tactile, un système d'autopilotage avancé et un intérieur spacieux et luxueux.</p>
         <p>-------------------</p>
-        <p>Pour plus d'info sur la voiture, cliquez <a href="https://www.tesla.com/model3">ici.</a></p>
+        <p>Pour plus d'info sur la voiture, cliquez <a href="https://www.tesla.com/model3" target="_blank">ici.</a></p>
         </center>
     </main>
 </body>
 <script type="text/javascript">
     function agrandir() {
-        var teslamodels = document.getElementById("teslamodels");
-        var width = teslamodels.clientWidth;
+        var teslamodel3 = document.getElementById("teslamodel3");
+        var width = teslamodel3.clientWidth;
         if (width == 600) {
             alert("Vous avez atteint le niveau de zoom maximal.");
         } else {
-            teslamodels.style.width = (width + 20) + "px";
+            teslamodel3.style.width = (width + 20) + "px";
         }
     }
     
     function diminuer() {
-        var teslamodels = document.getElementById("teslamodels");
-        var width = teslamodels.clientWidth;
+        var teslamodel3 = document.getElementById("teslamodel3");
+        var width = teslamodel3.clientWidth;
         if (width == 40) {
             alert("Vous avez atteint le niveau de zoom minimal.");
         } else {
-            teslamodels.style.width = (width - 20) + "px";
+            teslamodel3.style.width = (width - 20) + "px";
         }
     }
     </script>

@@ -13,14 +13,13 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
 
-
 <body>
     <header id="nav">
-        <nav>
+        <nav >
             <div class="logo"><a href="index.html">
                     <img src="./img/logo (2).png" alt="Logo"></a>
             </div>
-            <div class="liens">
+            <div  class="liens">
                 <ul id="texte">
                     <li><a href="modelS.html">Model S</a></li>
                     <li><a href="model3.html">Model 3</a></li>
@@ -29,6 +28,8 @@
                     <div id="toggle">
                         <i class="indicator"></i>
                     </div>
+
+
                 </ul>
             </div>
         </nav>
@@ -75,35 +76,62 @@
     </nav>
     <main id="page">
         <script src="script.js"></script>
-        <div style="text-align: center;">
-            <h1>Page d'accueil</h1>
-            <p>--------------</p>
-            <h3>Voici les différentes infos auxquelles vous pouvez accéder : </h3>
-            <h3><a href="voitures.html">Les différents modèles de voitures Tesla : </a><br></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="voitures.html"><img src="./img/teslas.jpg" alt="Voitures Tesla"
-                            style="border-radius: 30px;"></a>
-                </div>
-            </div>
-            <h3><a href="formulaire.html">S'inscrire à la newsletter</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="formulaire.html"><img src="./img/newsletter.jpg" alt="Newsletter"
-                            style="border-radius: 30px;" height="270px"></a>
-                </div>
-            </div>
-            <h3><a href="apropos.html">En savoir plus sur la marque Tesla</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="apropos.html"><img src="./img/logotesla1.jpg" alt="Logo Tesla" style="border-radius: 40px;"
-                            height="265px"></a>
-                </div>
-            </div>
-        </div>
+        <h1>Confirmation des informations :</h1>
+			<strong><div class="resultat" id="resultat">
+		</div></strong>
     </main>
     <script>
+         //Script Résultat
+		const queryString = window.location.search;
+		console.log(queryString);	
+	    const urlParams = new URLSearchParams(queryString);
+		var resultat = document.getElementById("resultat");
+			resultat.innerHTML += "<p>";		
+		if (urlParams.has('sexe')) {
+			const sexe = urlParams.get('sexe');
+			resultat.innerHTML += sexe + " ";
+		}
+		if (urlParams.has('nom')) {
+			const nom = urlParams.get('nom');
+			resultat.innerHTML += nom + " ";
+		}
+		if (urlParams.has('prenom')) {
+			const prenom = urlParams.get('prenom');
+			resultat.innerHTML += prenom + "<br>";
+		}
+		if (urlParams.has('datenaissance')) {
+			const datenaissance = urlParams.get('datenaissance');
+			resultat.innerHTML += "Né le " + datenaissance + "<br>";
+		}
+		if (urlParams.has('adressemail')) {
+			const adressemail = urlParams.get('adressemail');
+			resultat.innerHTML += "Adresse email : " + adressemail + "<br>";
 
+        if (urlParams.has('adressepostale')) {
+			const adressepostale = urlParams.get('adressepostale');
+			resultat.innerHTML += "Adresse postale : " + adressepostale + "<br>";
+		}
+        if (urlParams.has('models')) {
+			const models = urlParams.get('models');
+			resultat.innerHTML += "Inscrit aux news de : Tesla Model S " + "<br>";
+		}
+        if (urlParams.has('model3')) {
+			const model3 = urlParams.get('model3');
+			resultat.innerHTML += "Inscrit aux news de : Tesla Model 3 "  + "<br>";
+		}
+        if (urlParams.has('modelx')) {
+			const modelx = urlParams.get('modelx');
+			resultat.innerHTML += "Inscrit aux news de : Tesla Model X " + "<br>";
+		}
+        if (urlParams.has('modely')) {
+			const modely = urlParams.get('modely');
+			resultat.innerHTML += "Inscrit aux news de : Tesla Model Y " + "<br>";
+		}
+
+    }
+        
+		
     </script>
 </body>
+
 </html>

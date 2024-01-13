@@ -5,22 +5,21 @@
     <link rel="icon" href="./img/logo (2).png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJET NSI</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-
+</head>
 
 <body>
     <header id="nav">
-        <nav>
+        <nav >
             <div class="logo"><a href="index.html">
                     <img src="./img/logo (2).png" alt="Logo"></a>
             </div>
-            <div class="liens">
+            <div  class="liens">
                 <ul id="texte">
                     <li><a href="modelS.html">Model S</a></li>
                     <li><a href="model3.html">Model 3</a></li>
@@ -29,6 +28,8 @@
                     <div id="toggle">
                         <i class="indicator"></i>
                     </div>
+
+
                 </ul>
             </div>
         </nav>
@@ -55,7 +56,7 @@
             </li>
             <li class="navbar-item">
                 <a href="voitures.html" class="navbar-link">
-                    <i class="fas fa-folder navbar-iconfas fa-bell navbar-icon"></i>
+                    <i class="fas fa-folder navbar-icon"></i>
                     <span class="navbar-title">Modèles de voitures</span>
                 </a>
             </li>
@@ -75,35 +76,50 @@
     </nav>
     <main id="page">
         <script src="script.js"></script>
-        <div style="text-align: center;">
-            <h1>Page d'accueil</h1>
-            <p>--------------</p>
-            <h3>Voici les différentes infos auxquelles vous pouvez accéder : </h3>
-            <h3><a href="voitures.html">Les différents modèles de voitures Tesla : </a><br></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="voitures.html"><img src="./img/teslas.jpg" alt="Voitures Tesla"
-                            style="border-radius: 30px;"></a>
-                </div>
-            </div>
-            <h3><a href="formulaire.html">S'inscrire à la newsletter</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="formulaire.html"><img src="./img/newsletter.jpg" alt="Newsletter"
-                            style="border-radius: 30px;" height="270px"></a>
-                </div>
-            </div>
-            <h3><a href="apropos.html">En savoir plus sur la marque Tesla</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="apropos.html"><img src="./img/logotesla1.jpg" alt="Logo Tesla" style="border-radius: 40px;"
-                            height="265px"></a>
-                </div>
-            </div>
-        </div>
+        <center>
+        <h1>Tesla Model S</h1>
+        <img width="500px" src="./img/teslamodels.jpg" id="teslamodels">
+        <p>
+            <button type="button" onclick="agrandir()">+ </button>
+            <button type="button" onclick="diminuer()">- </button>
+          </p>
+        <table>
+            <tr>
+                <th></th> <th>Vitesse max</th> <th>Poids</th> <th>0 à 100km/h</th>
+            </tr>
+            <tr>
+                <td>Model S</td> <td>239 km/h</td> <td>2,068 tonnes</td> <td>3,1s</td>
+            <tr>
+                <td>Model S Plaid</td> <td>321 km/h</td> <td>2,161 tonnes</td> <td>1,99s</td>
+            </tr>
+        </table>
+        <h1>Equipements de la voiture</h1>
+        <p>-------------------</p>
+        <p>La tesla model s est équipée de nombreuses fonctionnalités avancées, notamment une interface de conduite centrée sur l'écran tactile, un système d'autopilotage avancé et un intérieur spacieux et luxueux.</p>
+        <p>-------------------</p>
+        <p>Pour plus d'info sur la voiture, cliquez <a href="https://www.tesla.com/models" target="_blank">ici.</a></p>
+        </center>
     </main>
-    <script>
-
-    </script>
 </body>
+<script type="text/javascript">
+function agrandir() {
+    var teslamodels = document.getElementById("teslamodels");
+    var width = teslamodels.clientWidth;
+    if (width == 600) {
+        alert("Vous avez atteint le niveau de zoom maximal.");
+    } else {
+        teslamodels.style.width = (width + 20) + "px";
+    }
+}
+
+function diminuer() {
+    var teslamodels = document.getElementById("teslamodels");
+    var width = teslamodels.clientWidth;
+    if (width == 40) {
+        alert("Vous avez atteint le niveau de zoom minimal.");
+    } else {
+        teslamodels.style.width = (width - 20) + "px";
+    }
+}
+</script>
 </html>

@@ -5,22 +5,21 @@
     <link rel="icon" href="./img/logo (2).png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJET NSI</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-
+</head>
 
 <body>
     <header id="nav">
-        <nav>
+        <nav >
             <div class="logo"><a href="index.html">
                     <img src="./img/logo (2).png" alt="Logo"></a>
             </div>
-            <div class="liens">
+            <div  class="liens">
                 <ul id="texte">
                     <li><a href="modelS.html">Model S</a></li>
                     <li><a href="model3.html">Model 3</a></li>
@@ -29,6 +28,8 @@
                     <div id="toggle">
                         <i class="indicator"></i>
                     </div>
+
+
                 </ul>
             </div>
         </nav>
@@ -75,35 +76,44 @@
     </nav>
     <main id="page">
         <script src="script.js"></script>
-        <div style="text-align: center;">
-            <h1>Page d'accueil</h1>
-            <p>--------------</p>
-            <h3>Voici les différentes infos auxquelles vous pouvez accéder : </h3>
-            <h3><a href="voitures.html">Les différents modèles de voitures Tesla : </a><br></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="voitures.html"><img src="./img/teslas.jpg" alt="Voitures Tesla"
-                            style="border-radius: 30px;"></a>
-                </div>
-            </div>
-            <h3><a href="formulaire.html">S'inscrire à la newsletter</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="formulaire.html"><img src="./img/newsletter.jpg" alt="Newsletter"
-                            style="border-radius: 30px;" height="270px"></a>
-                </div>
-            </div>
-            <h3><a href="apropos.html">En savoir plus sur la marque Tesla</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="apropos.html"><img src="./img/logotesla1.jpg" alt="Logo Tesla" style="border-radius: 40px;"
-                            height="265px"></a>
-                </div>
-            </div>
-        </div>
+        <center>
+        <h1>Tesla Model Y</h1>
+        <p>-------------------</p>
+        <img width="500px" src="./img/teslamodely.jpg" id="teslamodely">
+        <p>
+            <button type="button" onclick="agrandir()">+ </button>
+            <button type="button" onclick="diminuer()">- </button>
+          </p>
+        <p>-------------------</p>
+        <h1>Présentation de la Tesla Model model Y</h1>
+        <p>La Tesla Model Y est un véhicule électrique crossover produit par Tesla Motors. Il est basé sur la plateforme de la Model 3, mais offre une silhouette de SUV avec une cabine spacieuse pour jusqu'à 7 passagers. La Model Y est équipée d'un moteur électrique puissant qui fournit une accélération rapide et une conduite silencieuse, avec une autonomie pouvant aller jusqu'à 326 miles en une seule charge.</p>
+        <h1>Equipements de la voiture</h1>
+        <p>-------------------</p>
+        <p>L'intérieur est similaire à celui de la Model 3, avec un grand écran central pour la navigation, le contrôle de la voiture et les fonctionnalités multimédia. La Model Y dispose également de fonctionnalités de sécurité de pointe, telles que le freinage d'urgence autonome, la détection des obstacles et le maintien de la voie.</p>
+        <p>-------------------</p>
+        <p>Pour plus d'info sur la voiture, cliquez <a href="https://www.tesla.com/modelY" target="_blank">ici.</a></p>
+        </center>
     </main>
-    <script>
-
-    </script>
 </body>
+<script type="text/javascript">
+    function agrandir() {
+        var teslamodely = document.getElementById("teslamodely");
+        var width = teslamodely.clientWidth;
+        if (width == 600) {
+            alert("Vous avez atteint le niveau de zoom maximal.");
+        } else {
+            teslamodely.style.width = (width + 20) + "px";
+        }
+    }
+    
+    function diminuer() {
+        var teslamodely = document.getElementById("teslamodely");
+        var width = teslamodely.clientWidth;
+        if (width == 40) {
+            alert("Vous avez atteint le niveau de zoom minimal.");
+        } else {
+            teslamodely.style.width = (width - 20) + "px";
+        }
+    }
+    </script>
 </html>

@@ -1,19 +1,26 @@
-function agrandir() {
-    var teslamodels = document.getElementById("teslamodels");
-    var width = teslamodels.clientWidth;
-    if (width == 600) {
-        alert("Vous avez atteint le niveau de zoom maximal.");
-    } else {
-        teslamodels.style.width = (width + 20) + "px";
-    }
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
+const leftbar = document.getElementById('leftbar');
+const page = document.getElementById('page');
+toggle.onclick = function(){
+    toggle.classList.toggle('active');
+    nav.classList.toggle('active');
+    page.classList.toggle('active');
+    leftbar.classList.toggle('active');
+
 }
 
-function diminuer() {
-    var teslamodels = document.getElementById("teslamodels");
-    var width = teslamodels.clientWidth;
-    if (width == 40) {
-        alert("Vous avez atteint le niveau de zoom minimal.");
-    } else {
-        teslamodels.style.width = (width - 20) + "px";
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

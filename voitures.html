@@ -5,22 +5,21 @@
     <link rel="icon" href="./img/logo (2).png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PROJET NSI</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-
+</head>
 
 <body>
     <header id="nav">
-        <nav>
+        <nav >
             <div class="logo"><a href="index.html">
                     <img src="./img/logo (2).png" alt="Logo"></a>
             </div>
-            <div class="liens">
+            <div  class="liens">
                 <ul id="texte">
                     <li><a href="modelS.html">Model S</a></li>
                     <li><a href="model3.html">Model 3</a></li>
@@ -29,6 +28,8 @@
                     <div id="toggle">
                         <i class="indicator"></i>
                     </div>
+
+
                 </ul>
             </div>
         </nav>
@@ -75,35 +76,41 @@
     </nav>
     <main id="page">
         <script src="script.js"></script>
-        <div style="text-align: center;">
-            <h1>Page d'accueil</h1>
-            <p>--------------</p>
-            <h3>Voici les différentes infos auxquelles vous pouvez accéder : </h3>
-            <h3><a href="voitures.html">Les différents modèles de voitures Tesla : </a><br></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="voitures.html"><img src="./img/teslas.jpg" alt="Voitures Tesla"
-                            style="border-radius: 30px;"></a>
+        <h1>Selectionez la voiture de votre choix :</h1>
+        <div>
+            <div class="models" style="text-align:center" >
+                <h2><a href="modelS.html">Model S</h2>
+                <div class="zomm">
+                    <div class="image">
+                    <img src="./img/teslamodels.jpg" alt="Tesla model S">    
+                    </div>
+                </div>            
+            </div>
+            <div class="model3" style="text-align: center;" >
+                <h2><a href="model3.html">Model 3</h2>
+                <div class="zomm">
+                    <div class="image">
+                    <img src="./img/teslamodel3.jpg" alt="Tesla model 3">    
+                    </div>
                 </div>
             </div>
-            <h3><a href="formulaire.html">S'inscrire à la newsletter</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="formulaire.html"><img src="./img/newsletter.jpg" alt="Newsletter"
-                            style="border-radius: 30px;" height="270px"></a>
+            <div class="modelX" style="text-align: center;" >
+                <h2><a href="modelX.html">Model X</h2>
+                <div class="zomm">
+                    <div class="image">
+                    <img src="./img/teslamodelx.jpg" alt="Tesla model X">    
+                    </div>
+                </div> 
+            </div>
+            <div class="modelY" style="text-align: center;" >
+                <h2><a href="modelY.html">Model Y</h2>
+                <div class="zomm">
+                    <div class="image">
+                    <img src="./img/teslamodely.jpg" alt="Tesla model Y">    
+                    </div>
                 </div>
             </div>
-            <h3><a href="apropos.html">En savoir plus sur la marque Tesla</a></h3>
-            <div class="zomm">
-                <div class="image">
-                    <a href="apropos.html"><img src="./img/logotesla1.jpg" alt="Logo Tesla" style="border-radius: 40px;"
-                            height="265px"></a>
-                </div>
             </div>
-        </div>
-    </main>
-    <script>
-
-    </script>
-</body>
+        </main>
+    </body>
 </html>
